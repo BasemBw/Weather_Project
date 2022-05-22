@@ -10,10 +10,10 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'node_modules')))
 app.use(express.static(path.join(__dirname, 'dist')))
 
-mongoose.connect("mongodb://localhost/WeatherDB")
+mongoose.connect(process.env.MONGODB_URL||'mongodb://localhost/WeatherDB');
 
 
 app.use('/',api)
 
-const port = 7070
-app.listen(port,function(){})
+const PORT = 8080
+app.listen(process.env.PORT || PORT);
