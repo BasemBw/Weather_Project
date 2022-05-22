@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="searchNavbar">
+            <div class="inputClass"><input placeholder="City" type="text" /></div>
+            <div class="buttonClass"><button class="button" onclick=handleSearch()><i id="searchIcon" class="fa fa-search"></i></button></div>
+        </div>
+        <div class="weatherCards">
+        </div>
+    </div>
+    <script id="template" type="text/x-handlebars-template">
+        {{#each cities}}
+                <div class="weather">
+                    {{#if exists}}
+                    <div style="margin-top: 30px;padding-top: 10px;" class="div"><button class="minus-button plus-button--large">-</button></div>
+                    {{else}}
+                      <div style="margin-top: 30px;padding-top: 10px;" class="div"><button class="plus-button plus-button--large">+</button></div>
+                     {{/if}}
+                    <div class="div info-div">
+                        <p class="temperature">{{temperature}}℃</p>
+                        <p class="name">{{name}}</p>
+                    </div>
+                    <div style=" margin-top: 0px;" class="div">
+                        <img class="conditionPic" alt="{{conditionPic}}" src='https://openweathermap.org/img/wn/{{conditionPic}}@2x.png'/>
+                        <p class="condition">{{condition}}</p>
+                    </div>
+                    <hr>
+                </div>
+        {{/each}}
+    </script>
+    <script src="./validator/validator.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./axios/dist/axios.js"></script>
+    <script src="render.js"></script>
+    <script src="model.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

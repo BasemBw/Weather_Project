@@ -1,0 +1,107 @@
+body{
+  display: grid;
+  justify-items: center;
+}
+.container{
+  width: 70%;
+  height: fit-content;
+  background-color:#1FB9F3 ;
+  border-radius: 10px;
+}
+.searchNavbar{
+  display: flex;
+  height: 50px;
+}
+.inputClass{
+ width: 80%;
+ height: 100%;
+}
+.buttonClass{
+  width: 20%;
+  height: 100%;
+  background-color: #1FB9F3;
+}
+.button{
+  border: none;
+  background-color: #1FB9F3;
+}
+#searchIcon{
+  color: white;
+  font-size: xx-large;
+}
+#searchIcon:hover {
+  color: black;
+}
+input{
+  width: 100%;
+  height: calc(100% - 6px);
+  border: none;
+  color: white;
+  background-color:#1FB9F3 ;
+  border-bottom: 0.5px solid;
+}
+::placeholder { 
+  color: white;
+  font-size: larger;
+}
+input:focus{ outline: none; } 
+button{
+  width: 100%;
+  height: 100%;
+}
+.weatherCards{
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+  height: fit-content;
+}
+.weather{
+  display: grid;
+  height: 150px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 10px;
+  box-shadow: #1FB9F3;
+}
+.div{
+  width: 100%;
+  height: 150px;
+  text-align: center;
+}
+.plus-button {
+	width: 35px;
+    height: 35px;
+    background-color:#377BB5;
+    color:white;
+    border-radius:50%;
+    font-size:35px;
+    display:inline-block;
+    margin: 15px 10px;
+    position: relative;
+    vertical-align: top;
+  
+}
+.minus-button {
+	width: 35px;
+    height: 35px;
+    background-color:#377BB5;
+    color:white;
+    border-radius:50%;
+    font-size:35px;
+    display:inline-block;
+    margin: 15px 10px;
+    position: relative;
+    vertical-align: top;
+  
+}
+.plus-button--large {
+	font-size: 22px;
+}
+.temperature{
+  padding-top: 20px;
+  font-size: large;
+  font-style: italic;
+}
+p{
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
